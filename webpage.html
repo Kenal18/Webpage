@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            overflow-x: hidden;
+        }
+        .cont1
+        {   
+            height: 60vh;
+            width: 99vw;
+            background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .box
+        {
+            color: white;
+            position: relative;
+            bottom: 300px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .search
+        {   
+            position: relative;
+            border-radius: 60px;
+            width: 800px;
+            height: 50px;
+            border: 2px solid silver;
+            font-size: 25px;
+            box-sizing: border-box;
+            padding: 20px;
+            
+        }
+        .SUBSCRIBE
+        {
+            position: relative;
+            border-radius: 50px;
+            width: 100px;
+            height: 35px;
+            border: 2px solid silver;
+            box-sizing: border-box;
+            background-color: orange;
+            border: none;
+            right: 110px;
+            bottom: 3px;
+            padding: 10px;
+        }
+        a
+        {
+            text-decoration: none;
+            color: white;
+        }
+        .deals
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            gap: 50px;
+        }
+        .images
+        {
+            height: 400px;
+            width: 20%;
+            border: 2px solid silver;
+            border-radius: 20px;
+        }
+        .zoo
+        {
+            height: 70%;
+            width: 100%;
+        }
+        .adventure
+        {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+        }
+        .trip
+        {
+            height: 400px;
+            width: 15%;
+            font-size: 25px;
+            font-weight: bold;
+            color: blue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: ;
+        }
+        .images2
+        {
+            height: 70%;
+            width: 100%;
+        }
+        .oceantext
+        {
+            color: black;
+            font-size: 40px;
+            position: relative;
+            bottom: 500px;
+            left: 100px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .phone
+        {
+            position: relative;
+            bottom: 795px;
+            left: 1000px;
+        }
+        .places1
+        {
+            height: 400px;
+            width: 100%;
+            position: relative;
+            bottom: 600px;
+            display: flex;
+            gap: 5%;
+        }
+        .aus
+        {   
+            height:400px;
+            width: 60%;
+            background-image: url("images/australia.jpg");
+            background-size: cover;
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 100px;
+            border-radius: 50px;
+            box-sizing: border-box;
+        }
+        .india
+        {
+            height:400px;
+            width: 35%;
+            background-image: url("images/india.jpg");
+            background-size: cover;
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 100px;
+            border-radius: 50px;
+            box-sizing: border-box;
+            background-position: right;
+        }
+        .places2
+        {
+            display: flex;
+            gap: 10px;
+            height: 300px;
+            width: 100%;
+            bottom: 550px;
+            position: relative;
+            justify-content: space-around;
+        }
+        .peru
+        {
+            height: 300px;
+            width: 30%;
+            background-image: url("images/lama.jpg");
+            background-size: cover;
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 80px;
+            border-radius: 50px;
+            box-sizing: border-box;
+            background-position: right;
+        }
+        .Bali
+        {
+            height: 300px;
+            width: 30%;
+            background-image: url("images/Sydney-Harbour-Australia-Buildings-Bird-View-iphone.jpg");
+            background-size: cover;
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 80px;
+            border-radius: 50px;
+            box-sizing: border-box;
+            background-position: right;
+        }
+        .Hawai
+        {
+            height: 300px;
+            width: 30%;
+            background-image: url("images/Waikiki-Beach-Hawaii-iphone.jpg");
+            background-size: cover;
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 80px;
+            border-radius: 50px;
+            box-sizing: border-box;
+            background-position: right;
+        }
+        .continents
+        {
+            height: 300px;
+            width: 100%;
+            background-image: url("images/kayaking.jpg");
+            filter: blur(.3rem);
+            background-size: cover;
+            background-position: right;
+            position: relative;
+            bottom: 400px;
+        }
+    </style>
+</head>
+<body>
+   <div class="cont1">
+        <div style="font-size: 30px; color: white;">GO ADVENTURE</div>
+        <div style="display: flex;color: white;"><div><a href="https://www.youtube.com/" target="_blank">The Weekly Deals</a></div>&nbsp;&nbsp;&nbsp;<div><a href="https://www.youtube.com/" target="_blank">Login</a></div></div>
+    </div>
+    <div class="box">UPTO 60% OFF ADVENTURE TRAVEL
+        <div ><input type="email" class="search" placeholder="Enter Your Email" required><a href="https://www.youtube.com/" target="_blank"><input type="button" value="SUBSCRIBE" class="SUBSCRIBE"></a></div>
+    </div>
+    <div style="text-align: center;font-weight: bold;color: blue;font-size: 40px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Recent Deals</div><br><br>
+    <div class="deals">
+        <div class="images"><img src="images/redpanda.jpg" alt="" class="zoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione in reprehenderit, rem incidunt inventore, obcaecati odit ex libero nesciunt mollitia praesentium, magni aut recusandae? Sit error recusandae neque magni quibusdam, totam accusantium consequuntur fuga consectetur expedita, quis, magnam tenetur molestiae!</div>
+        <div class="images"><img src="images/fox.jpeg" alt="" class="zoo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit molestiae error, numquam unde sapiente fugiat itaque. Similique, earum repellat ex incidunt reiciendis necessitatibus porro nihil, sapiente quas tempora rem, minima vitae aut labore laboriosam officia nemo! Aliquid eaque inventore tempora.</div>
+        <div class="images"><img src="images/girrafe.jpg" alt="" class="zoo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit molestiae error, numquam unde sapiente fugiat itaque. Similique, earum repellat ex incidunt reiciendis necessitatibus porro nihil, sapiente quas tempora rem, minima vitae aut labore laboriosam officia nemo! Aliquid eaque inventore tempora.</div>
+        <div class="images"><img src="images/leapord.jpeg" alt="" class="zoo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit molestiae error, numquam unde sapiente fugiat itaque. Similique, earum repellat ex incidunt reiciendis necessitatibus porro nihil, sapiente quas tempora rem, minima vitae aut labore laboriosam officia nemo! Aliquid eaque inventore tempora.</div>
+    </div>
+    <br><br><br><br><br>
+    <div style="text-align: center;font-size: 40px;font-weight: bold;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: blue;">How It Works</div>
+    <div class="adventure">
+        <div class="trip"><img src="images/surfing-removebg-preview.png" alt="" class="images2">Handpicked Adventures</div>
+        <div class="trip"><img src="images/deals-5-370988.png" alt="" class="images2">Get Exclusive Deals</div>
+        <div class="trip"><img src="images/jeep-removebg-preview.png" alt="" class="images2">Trip that matches your interests</div>
+    </div>
+    <div class="save">
+        <img src="images/pexels-pok-rie-33563-2049422.jpg" height="700px" width="100%" class="ocean">
+        <div class="oceantext"><b>SIGN UP AND SAVE</b><br>For The TOP DEALS from the <br>world's BEST tour operators!!! <br>SIGN UP AND NEVER MISS ANOTHER ADVENTURE</div>
+        <div class="phone"><img src="images/phone-removebg-preview.png" alt="" height="600px"></div>
+    </div>
+    <div style="text-align: center;font-weight: bold;color: blue;font-size: 40px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; position: relative;bottom: 700px;">Popular Destinations</div>
+    <div class="places1">
+        <div class="aus">Explore <br> Australia</div>
+        <div class="india">Explore <br> INDIA</div>
+    </div>
+    <div class="places2">
+        <div class="peru">Discover <br> Peru</div>
+        <div class="Bali">Discover <br> Bali</div>
+        <div class="Hawai">Discover <br> Hawai</div>
+    </div>
+    <div class="continents"></div>
+    <div style="text-align: center;font-size: 40px;font-weight: bold;color: white;position: relative;bottom: 600px;">HUGE SAVINGS ACROSS 7 CONTINENTS</div>
+</body>
+</html>
