@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         *
         {
             overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        html
+        {
+            scroll-behavior: smooth;
         }
         .cont1
         {   
-            height: 60vh;
+            height: 100vh;
             width: 99vw;
             background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: bottom;
-            display: flex;
-            justify-content: space-between;
             padding: 20px;
             box-sizing: border-box;
             position: relative;
@@ -26,38 +28,40 @@
         .box
         {
             color: white;
-            position: relative;
-            bottom: 300px;
-            display: flex;
             align-items: center;
-            flex-direction: column;
-            gap: 20px;
         }
         .search
         {   
-            position: relative;
             border-radius: 60px;
-            width: 800px;
+            width: 76vw;
             height: 50px;
-            border: 2px solid silver;
+            border: none;
             font-size: 25px;
+            background-color: transparent;
             box-sizing: border-box;
-            padding: 20px;
-            
+            padding: 10px;
         }
-        .SUBSCRIBE
+        #SUBSCRIBE
         {
-            position: relative;
             border-radius: 50px;
-            width: 100px;
-            height: 35px;
-            border: 2px solid silver;
-            box-sizing: border-box;
+            width: 20vw;
+            height: 50px;
             background-color: orange;
             border: none;
-            right: 110px;
-            bottom: 3px;
+            color: white;
+            font-size: 24px;
+        }
+        .form2
+        {
+            display: flex;
+            width: 50vw;
+            height: 50px;
+            border-radius: 60px;
+            background-color: whitesmoke;
+            justify-content: space-around;
+            align-items: center;
             padding: 10px;
+            overflow-y: hidden;
         }
         a
         {
@@ -74,7 +78,7 @@
         }
         .images
         {
-            height: 400px;
+            height: 300px;
             width: 20%;
             border: 2px solid silver;
             border-radius: 20px;
@@ -125,7 +129,7 @@
         {
             height: 400px;
             width: 100%;
-            position: relative;
+            /* position: relative; */
             bottom: 600px;
             display: flex;
             gap: 5%;
@@ -166,7 +170,7 @@
             height: 300px;
             width: 100%;
             bottom: 550px;
-            position: relative;
+            /* position: relative; */
             justify-content: space-around;
         }
         .peru
@@ -219,28 +223,126 @@
             height: 300px;
             width: 100%;
             background-image: url("images/kayaking.jpg");
-            filter: blur(.3rem);
             background-size: cover;
             background-position: right;
-            position: relative;
-            bottom: 400px;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+        .rel
+        {
+            background-image: url(images/pexels-pok-rie-33563-2049422.jpg);
+            height: 100vh;
+            width: 100vw;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .text
+        {
+            height: 98vh;
+            width: 33vw;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 30px;
+        }
+        .form1
+        {
+            height: 50vh;
+            width: 30vw;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 25px;
+        }
+        .btn1
+        {
+            height: 40px;
+            width: 100px;
+            border-radius: 60px;
+        }
+        .txtbox
+        {
+            height: 30px;
+            width: 15vw;
+            border-radius: 50px;
+            border: 2px solid silver;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .bird
+        {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .info  
+        {
+            height: 20vh;
+            width: 20vh;
+            font-size: 15px;
+            text-align: justify;
+        }
+        .footer1
+        {
+            height: 20vh;
+            width: 100vw;
+            display: flex;
+        }
+        .footer2
+        {
+            height: 100%;
+            width: 25%;
+            border-left: 2px solid silver;
+            align-items: center;
+            text-align: center;
+        }
+        .footer3
+        {   
+            text-align: center;
+            color: silver;
+        }
+        .footer4
+        {
+            color: silver;
+            text-align: center;
+        }
+        .footer5
+        {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
         }
     </style>
 </head>
 <body>
    <div class="cont1">
+    <div style="display: flex;justify-content: space-between;height: 50vh;">
         <div style="font-size: 30px; color: white;">GO ADVENTURE</div>
-        <div style="display: flex;color: white;"><div><a href="https://www.youtube.com/" target="_blank">The Weekly Deals</a></div>&nbsp;&nbsp;&nbsp;<div><a href="https://www.youtube.com/" target="_blank">Login</a></div></div>
+        <div style="display: flex;color: white;"><div><a href="#deals">The Weekly Deals</a></div>&nbsp;&nbsp;&nbsp;<div><a href="#form1">Login</a></div></div>
     </div>
-    <div class="box">UPTO 60% OFF ADVENTURE TRAVEL
-        <div ><input type="email" class="search" placeholder="Enter Your Email" required><a href="https://www.youtube.com/" target="_blank"><input type="button" value="SUBSCRIBE" class="SUBSCRIBE"></a></div>
+    <center>
+    <div class="box" style="font-size: 50px;line-height: 35px;">
+        <b>UPTO 60% OFF</b> ADVENTURE TRAVEL <br>
+        <span style="font-size: 24px;">Join Over 40,000 Members <br>
+        Get exclusive access on members only Deals on <br>
+        Amazing ADVENTURE by email</span><br><br>
+        <div ><form action="" class="form2"><input type="email" class="search" placeholder="Enter Your Email"  required><button type="submit" value="SUBMIT" id="SUBSCRIBE">SUBSCRIBE</button></form></div>
     </div>
-    <div style="text-align: center;font-weight: bold;color: blue;font-size: 40px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Recent Deals</div><br><br>
-    <div class="deals">
-        <div class="images"><img src="images/redpanda.jpg" alt="" class="zoo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione in reprehenderit, rem incidunt inventore, obcaecati odit ex libero nesciunt mollitia praesentium, magni aut recusandae? Sit error recusandae neque magni quibusdam, totam accusantium consequuntur fuga consectetur expedita, quis, magnam tenetur molestiae!</div>
-        <div class="images"><img src="images/fox.jpeg" alt="" class="zoo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit molestiae error, numquam unde sapiente fugiat itaque. Similique, earum repellat ex incidunt reiciendis necessitatibus porro nihil, sapiente quas tempora rem, minima vitae aut labore laboriosam officia nemo! Aliquid eaque inventore tempora.</div>
-        <div class="images"><img src="images/girrafe.jpg" alt="" class="zoo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit molestiae error, numquam unde sapiente fugiat itaque. Similique, earum repellat ex incidunt reiciendis necessitatibus porro nihil, sapiente quas tempora rem, minima vitae aut labore laboriosam officia nemo! Aliquid eaque inventore tempora.</div>
-        <div class="images"><img src="images/leapord.jpeg" alt="" class="zoo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit molestiae error, numquam unde sapiente fugiat itaque. Similique, earum repellat ex incidunt reiciendis necessitatibus porro nihil, sapiente quas tempora rem, minima vitae aut labore laboriosam officia nemo! Aliquid eaque inventore tempora.</div>
+</center>
+</div>
+    <div style="text-align: center;font-weight: bold;color: blue;font-size: 40px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" id="deals">Recent Deals</div><br><br>
+    <div class="deals" >
+        <div class="images"><img src="images/pexels-ahmad-syahrir-107128-758744.jpg" alt="" class="zoo"><b style="color: blue;font-size: 25px;">Free Wilderness Track</b></div>
+        <div class="images"><img src="images/pexels-pok-rie-33563-2049422.jpg" alt="" class="zoo"><b style="color: blue;font-size: 25px;">Discover Croatia and Italy</b></div>
+        <div class="images"><img src="images/pexels-riciardus-307008.jpg" alt="" class="zoo"><b style="color: blue;font-size: 25px;">Discover Ocean</b></div>
+        <div class="images"><img src="images/pexels-ajaybhargavguduru-939729.jpg" alt="" class="zoo"><b style="color: blue;font-size: 25px;">Free Jungle Safari</b></div>
     </div>
     <br><br><br><br><br>
     <div style="text-align: center;font-size: 40px;font-weight: bold;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: blue;">How It Works</div>
@@ -249,22 +351,68 @@
         <div class="trip"><img src="images/deals-5-370988.png" alt="" class="images2">Get Exclusive Deals</div>
         <div class="trip"><img src="images/jeep-removebg-preview.png" alt="" class="images2">Trip that matches your interests</div>
     </div>
-    <div class="save">
-        <img src="images/pexels-pok-rie-33563-2049422.jpg" height="700px" width="100%" class="ocean">
-        <div class="oceantext"><b>SIGN UP AND SAVE</b><br>For The TOP DEALS from the <br>world's BEST tour operators!!! <br>SIGN UP AND NEVER MISS ANOTHER ADVENTURE</div>
-        <div class="phone"><img src="images/phone-removebg-preview.png" alt="" height="600px"></div>
+    <div class="rel">
+        <div class="text" data-aos="fade-right">
+            <span style="font-weight: bolder;font-style: italic; "> SIGN UP AND SAVE </span><br>
+            For The TOP DEALS from the
+            <br>
+            world's BEST tour operators!!!
+            <br>
+            SIGN UP AND NEVER MISS ANOTHER ADVENTURE
+        </div>
+        <div class="form1" id="form1" data-aos="fade-left">
+            <form action="thanks.html" class="form1">
+                <div>Enter First name: <input type="text" placeholder="Enter First Name" required class="txtbox"></div>
+                <div>Enter Last name: <input type="text" placeholder="Enter Last Name" required class="txtbox"></div>
+                <div>Enter Email: <input type="email" placeholder="Enter Your Email" required class="txtbox"></div>
+                <button type="submit" class="btn1">SUBMIT</button>
+            </form>
+        </div>
     </div>
-    <div style="text-align: center;font-weight: bold;color: blue;font-size: 40px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; position: relative;bottom: 700px;">Popular Destinations</div>
+    <br><br>
+    <div style="text-align: center;font-weight: bold;color: blue;font-size: 40px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; ;bottom: 700px;">Popular Destinations</div>
+    <br><br>
     <div class="places1">
-        <div class="aus">Explore <br> Australia</div>
-        <div class="india">Explore <br> INDIA</div>
+        <div class="aus" data-aos="fade-right">Explore <br> Australia</div>
+        <div class="india" data-aos="fade-left">Explore <br> INDIA</div>
     </div>
+    <br><br>
     <div class="places2">
-        <div class="peru">Discover <br> Peru</div>
-        <div class="Bali">Discover <br> Bali</div>
-        <div class="Hawai">Discover <br> Hawai</div>
+        <div class="peru" data-aos="fade-right">Discover <br> Peru</div>
+        <div class="Bali" data-aos="fade-in">Discover <br> Bali</div>
+        <div class="Hawai" data-aos="fade-left">Discover <br> Hawai</div>
     </div>
-    <div class="continents"></div>
-    <div style="text-align: center;font-size: 40px;font-weight: bold;color: white;position: relative;bottom: 600px;">HUGE SAVINGS ACROSS 7 CONTINENTS</div>
+    <br><br><br>
+    <div class="continents"><div style="text-align: center;font-size: 40px;font-weight: bold;color: white;">HUGE SAVINGS ACROSS 7 CONTINENTS <br> <br>
+        <div class="bird">
+            <div class="info"><b>EarlyBird</b> Deals <br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo quas corrupti neque, dolorem magni iure.</div>
+            <div class="info"><b>Last Minute</b> Deals <br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo quas corrupti neque, dolorem magni iure.</div>
+            <div class="info"><b>2 FOR 1</b> Deals <br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo quas corrupti neque, dolorem magni iure.</div>
+            <div class="info"><b>EXCLUSIVE MEMBER</b> Deals <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nulla.</div>
+        </div>
+    </div>
+    </div>
+    <br><br>
+    <div class="footer1">
+        <div class="footer2"><b style="color: goldenrod;"><br><br>FIND US</b><span style="color: blue;"> <br><br>Address Line <br><br>London, UK</span></div>
+        <div class="footer2"><b style="color: goldenrod;"><br><br>CALL US</b><span style="color: blue;"><br><br>+91 9574034478</span></div>
+        <div class="footer2"><b style="color: goldenrod;"><br><br>EMAIL US</b><span style="color: blue;"> <br><br>kenal180305@gmail.com</span></div>
+        <div class="footer2"><b style="color: goldenrod;"><br><br>FOLLOW US</b><span style="color: blue;"> <br><br>Be Inspired</span></div>
+    </div>
+    <br>
+    <div class="footer3">HOME  &nbsp;| &nbsp; THE AMAZING DEALS&nbsp;  |&nbsp;  CONTACT&nbsp;  |&nbsp;  TERMS OF USE&nbsp;  |&nbsp;  PRIVACY POLICY</div>
+    <br><br>
+    <hr>
+    <br><br>
+    <div class="footer4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe repudiandae sunt unde laboriosam, et similique earum tempora, incidunt quod nemo illo modi at omnis! Possimus sit perspiciatis, tenetur, molestias obcaecati iusto dolore assumenda, fugiat deserunt cupiditate dolor blanditiis officiis atque expedita praesentium magni nesciunt animi laudantium! Repudiandae aliquid accusamus voluptas at unde magni magnam assumenda? Quasi laboriosam, perspiciatis sunt fugit deserunt voluptatum expedita quia? Quibusdam impedit quidem rerum provident harum error iste quasi dolorum deleniti? Commodi, ipsam odio nostrum ullam minima nemo laborum repellendus temporibus sed id. Quae voluptates nihil cupiditate perferendis. Ipsam quas laboriosam eligendi vitae. Necessitatibus, officiis distinctio.</div>
+    <br><br>
+    <div class="footer5">
+        <div class="footer6" style="color: blue;"><b>GO ADVENTURE</b></div>
+        <div class="footer6" style="color: silver;">&copy 2020-2024 GO ADVENTURE, INC, GO ADVENTURE and any associated trademarks or logos.</div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
